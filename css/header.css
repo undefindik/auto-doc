@@ -1,0 +1,38 @@
+.header {
+    background: var(--black);
+    padding: 18px 0;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    right: 0;
+}
+
+.header__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu__list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu__link {
+    color: #fff;
+
+    &:hover {
+        transition: var(--transition);
+        color: var(--primary);
+    }
+}
+
+.header-phone {
+    color: #fff;
+
+    &:hover {
+        transition: var(--transition);
+        color: var(--primary);
+    }
+}

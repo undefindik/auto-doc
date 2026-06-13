@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>АвтоДок - Отзывы</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+</head>
+<body>
+<!-- Модальное окно с формой заказа звонка: открывается через setTimeout или кнопку "Заказать звонок" -->
+<div class="modal-wrapper none" id="request-form-modal">
+    <form class="form form-request" action="#" method="POST">
+        <div class="form__header">
+            <h3 class="title-3">Оставьте заявку</h3>
+            <button class="close" type="button"><img src="../img/close.svg" alt=""></button>
+        </div>
+        <div class="form__inputs">
+            <input type="text" id="name" name="name" placeholder="Алексей" required>
+            <input type="tel" id="phone" class="phone" name="phone" placeholder="+375 (29) 77-77-777" required>
+            <select placeholder="Услуг" id="service" name="service" required>
+                <option value="" disabled selected hidden>Выберите услугу</option>
+                <option value="diagnostic">Компьютерная диагностика</option>
+                <option value="repair-engine">Ремонт двигателя</option>
+                <option value="transmission">Ремонт КПП</option>
+                <option value="electrics">Автоэлектрика</option>
+                <option value="suspension">Ходовая часть</option>
+                <option value="oil-change">Замена масла и ТО</option>
+            </select>
+            <textarea id="message" name="message" placeholder="Опишите проблему или вопрос..."></textarea>
+            <label class="label-checkbox">
+                <input name="policy" class="checkbox-hidden" type="checkbox">
+                <span class="checkbox-custom"></span>
+                <p>Согласен на <a class="link" href="">обработку персональных данных</a></p>
+            </label>
+        </div>
+        <button type="submit" class="button form-button">Записаться</button>
+    </form>
+</div>
+
+<div class="modal-wrapper none" id="reviews-form-modal">
+    <form class="form form-reviews" action="#" method="POST">
+        <div class="form__header">
+            <h3 class="title-3">Оставьте отзыв</h3>
+            <button class="close" type="button"><img src="../img/close.svg" alt=""></button>
+        </div>
+        <div class="form__inputs">
+            <input type="text" id="first-name" name="first-name" placeholder="Имя" required>
+            <input type="text" id="last-name" name="last-name" placeholder="Фамилия" required>
+            <input type="tel" id="phone" class="phone" name="phone" placeholder="+375 (29) 77-77-777" required>
+            <select id="reviews-star" name="reviews-star" required>
+                <option value="" disabled selected hidden>Рейтинг</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <textarea id="message" name="message" placeholder="Отзыв"></textarea>
+            <label class="label-checkbox">
+                <input name="policy" class="checkbox-hidden" type="checkbox">
+                <span class="checkbox-custom"></span>
+                <p>Согласен на <a class="link" href="">обработку персональных данных</a></p>
+            </label>
+        </div>
+        <button type="submit" class="button form-button">Оценить</button>
+    </form>
+</div>
+<header class="header">
+    <div class="container">
+        <div class="header__row">
+            <a class="logo" href="/">
+                <img src="/img/logo.svg" alt="">
+            </a>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="/">Главная</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/#advantages">Преимущества</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/#about">О нас</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/pages/services.html">Услуги</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/pages/reviews.html">Отзывы</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#contact">Контакты</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/#request">Заявка</a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="header-phone" href="">+375 (00) 000-00-00</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="reviews">
+        <div class="container">
+            <div class="reviews__inner">
+                <h2 class="title-2">Отзывы</h2>
+                <div class="swiper reviews__swiper">
+                    <div class="swiper-wrapper reviews__swiper-wrapper">
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="reviews__notif">
+                    <div class="reviews__notif-text">
+                        <h3 class="title-3-light reviews__notif-title">Скидка 10% за отзыв</h3>
+                        <p class="description">Оставьте отзыв об нашем автосервисе и получите скидку на следующее обслуживание</p>
+                    </div>
+                    <button class="button reviews__notif-button">Оставить отзыв</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact__inner">
+                <div class="contact__info">
+                    <img class="contact__logo" src="../img/logo-dark.svg" alt="">
+                    <h3 class="title-3-light contact__title">Работаем ежедневно</h3>
+                    <div class="contact__item">
+                        <p class="contact__item-title"> Адрес автосервиса</p>
+                        <p class="contact__item-text description"> г. Минск, ул. Орловская, 000</p>
+                    </div>
+                    <div class="contact__item">
+                        <p class="contact__item-title"> Контактный номер</p>
+                        <p class="contact__item-text description"> +375 (00) 000-00-00</p>
+                    </div>
+                    <div class="contact__item">
+                        <p class="contact__item-title"> Email</p>
+                        <p class="contact__item-text description"> rep@autodoc.by</p>
+                    </div>
+                    <button class="button contact__button" type="button">Заказать звонок</button>
+                </div>
+                <div class="contact__map">
+                    <iframe style="width: 100%; height: 100%" src="https://yandex.ru/map-widget/v1/?um=constructor%3A1c9b193c09403aab1985a15647e64c306cbbe8b3941444d9077bc78ef70e96ba&amp;source=constructor" width="1030" height="540" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script type="module" src="../js/modules/swiper.js"></script>
+<script type="module" src="../js/modules/reviews.js" ></script>
+<script type="module" src="../js/modules/phone-mask.js"></script>
+<script type="module" src="../js/modules/modal.js"></script>
+</body>
+</html>

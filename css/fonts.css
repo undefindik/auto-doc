@@ -1,0 +1,58 @@
+ @font-face {
+     font-family: 'SF Pro Text';
+     src: url('../fonts/secondary-bold.woff') format('woff');
+     font-weight: 600;
+     font-style: normal;
+     font-display: swap;
+ }
+
+ @font-face {
+     font-family: 'SF Pro Text';
+     src: url('../fonts/secondary-medium.woff') format('woff');
+     font-weight: 500;
+     font-style: normal;
+     font-display: swap;
+ }
+
+ @font-face {
+     font-family: 'SF Pro Text';
+     src: url('../fonts/secondary-regular.woff') format('woff');
+     font-weight: 400;
+     font-style: normal;
+     font-display: swap;
+ }
+
+ @font-face {
+     font-family: 'SF Pro Text';
+     src: url('../fonts/secondary-regular-italic.woff') format('woff');
+     font-weight: normal;
+     font-style: italic;
+     font-display: swap;
+ }
+
+ @font-face {
+     font-family: 'Moderustic';
+     src: url('../fonts/primary-semibold.woff') format('woff');
+     font-weight: 600;
+     /* Semibold = 600 */
+     font-style: normal;
+     font-display: swap;
+ }
+
+ @font-face {
+     font-family: 'Moderustic';
+     src: url('../fonts/primary-medium.woff') format('woff');
+     font-weight: 500;
+     /* Medium = 500 */
+     font-style: normal;
+     font-display: swap;
+ }
+
+ @font-face {
+     font-family: 'Moderustic';
+     src: url('../fonts/primary-bold.woff') format('woff');
+     font-weight: bold;
+     /* Bold = 700 */
+     font-style: normal;
+     font-display: swap;
+ }
