@@ -54,7 +54,7 @@ aboutData.forEach(el => {
                        <div class="about__content">
                                                    <h3 class="about__item-title title-3-light">${el.title}</h3>
                             <p class="about__item-description description">${el.description}</p></div>
-                            <img class="about__item-img" src="/img/${el.image}" />
+                            <img class="about__item-img" src="/img${el.image}" />
                         </article>
                     </div>
     `
